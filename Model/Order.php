@@ -112,7 +112,7 @@ class Order extends EcommAppModel {
         ),
         'PaymnetMethod' => array(
             'className' => 'Ecomm.PaymentMethod',
-            'foreignKey' => 'paymnet_method_id',
+            'foreignKey' => 'payment_method_id',
             'conditions' => '',
             'fields' => '',
             'order' => ''
