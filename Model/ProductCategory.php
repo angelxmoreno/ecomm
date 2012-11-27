@@ -36,8 +36,8 @@ class ProductCategory extends EcommAppModel {
      *
      * @var array
      */
-    public $_belongsTo_ = array(
-        'ParentProductCategory' => array(
+    public $belongsTo = array(
+        'ParentCategory' => array(
             'className' => 'Ecomm.ProductCategory',
             'foreignKey' => 'parent_id',
             'conditions' => '',
@@ -51,7 +51,7 @@ class ProductCategory extends EcommAppModel {
      *
      * @var array
      */
-    public $_hasMany_ = array(
+    public $hasMany = array(
         'ChildCategory' => array(
             'className' => 'Ecomm.ProductCategory',
             'foreignKey' => 'parent_id',

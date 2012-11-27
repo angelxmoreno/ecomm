@@ -14,7 +14,8 @@ class ProductCategoriesController extends EcommAppController {
  */
 	public function index() {
 		$this->ProductCategory->recursive = 0;
-		$this->set('productCategories', $this->paginate());
+                $categories = $this->paginate();
+		$this->set('productCategories', $categories);
 	}
 
 /**
@@ -74,6 +75,9 @@ class ProductCategoriesController extends EcommAppController {
 		}
 		$products = $this->ProductCategory->Product->find('list');
 		$this->set(compact('products'));
+                
+                $parents = $this->ProductCategory->find('list');
+		$this->set(compact('parents'));
 	}
 
 /**
@@ -100,6 +104,9 @@ class ProductCategoriesController extends EcommAppController {
 		}
 		$products = $this->ProductCategory->Product->find('list');
 		$this->set(compact('products'));
+                
+                $parents = $this->ProductCategory->find('list');
+		$this->set(compact('parents'));
 	}
 
 /**

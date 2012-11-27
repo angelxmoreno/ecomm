@@ -7,8 +7,6 @@
 		echo $this->Form->input('short_description');
 		echo $this->Form->input('long_description');
 		echo $this->Form->input('parent_id');
-		echo $this->Form->input('lft');
-		echo $this->Form->input('rght');
 		echo $this->Form->input('Product');
 	?>
 	</fieldset>
